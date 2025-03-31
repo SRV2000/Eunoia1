@@ -1,0 +1,21 @@
+.banner_main {
+  background: url("../images/banner2.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+
+.banner_main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.banner_main .container {
+  position: relative;
+  z-index: 1;
+}
