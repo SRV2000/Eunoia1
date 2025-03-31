@@ -1,9 +1,5 @@
-/* Import images */
-@import "images.css";
-
 .banner_main {
-  background: url("https://raw.githubusercontent.com/srv2000/Eunoia1/main/website-html/images/banner2.jpg")
-    no-repeat center center;
+  background: url(../images/banner2.JPG) no-repeat center center;
   background-size: cover;
   min-height: 100vh;
   position: relative;
