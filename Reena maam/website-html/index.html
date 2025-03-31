@@ -17,6 +17,81 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css" />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <style>
+      .send_btn {
+        background: #000;
+        color: #fff;
+        padding: 12px 35px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      .send_btn:hover {
+        background: #333;
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .contactus {
+        width: 100%;
+        padding: 12px 15px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+
+      .contactus:focus {
+        border-color: #000;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .textarea {
+        width: 100%;
+        padding: 12px 15px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+        min-height: 120px;
+        resize: vertical;
+        transition: all 0.3s ease;
+      }
+
+      .textarea:focus {
+        border-color: #000;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .main_form {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 768px) {
+        .main_form {
+          padding: 20px;
+          margin-bottom: 30px;
+        }
+      }
+    </style>
     <!-- fevicon -->
     <link rel="icon" href="images/fevicon.png" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
@@ -292,7 +367,7 @@
     <div class="about">
       <div class="container-fluid">
         <div class="row d_flex">
-          <div class="col-md-7">
+          <div class="col-md-7" data-aos="fade-right">
             <div class="titlepage">
               <h2>About Us</h2>
               <span
@@ -300,7 +375,7 @@
                 in Chandigarh, India. We provide services ranging from
                 Architecture, Interior Design and Construction. We have a
                 diversified portfolio of Institutional, Residential, Commercial
-                and Industrial Projects pan India. “The Eunoia Architects” was
+                and Industrial Projects pan India. "The Eunoia Architects" was
                 believed and created as vision to bring out the Magic✨ in the
                 built environment that nurtures Mankind. It was founded in 2016
                 by Ar. Pragyay Batta.
@@ -320,7 +395,7 @@
     <div class="projects">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12" data-aos="fade-up">
             <div class="titlepage">
               <h2>Our Featured Projects</h2>
               <span
@@ -458,7 +533,7 @@
                             <div id="pro_ho" class="project_text">
                               <h3>Bold Lines 446</h3>
                               <p>
-                                <br />A doctor’s habitat on stilts, where 1st
+                                <br />A doctor's habitat on stilts, where 1st
                                 floor is for the paediatric clinic, 2nd floor
                                 serves the guests, 3rd and 4th are a duplex
                                 paradise for the family.
@@ -521,8 +596,8 @@
                               <h3>Interactive Office Spaces</h3>
                               <p>
                                 <br />Where the words are conveyed through
-                                geometry, “Wall of Fame” along the corridor to
-                                the founder’s cabin exhibiting a timeline of
+                                geometry, "Wall of Fame" along the corridor to
+                                the founder's cabin exhibiting a timeline of
                                 achievements.
                               </p>
                             </div>
@@ -561,7 +636,7 @@
     <div class="choose">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 col-md-6">
+          <div class="col-lg-12 col-md-6" data-aos="fade-up">
             <div class="titlepage">
               <h2>Why Choose Us</h2>
               <p>
@@ -595,61 +670,58 @@
     <div class="contact">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12" data-aos="fade-up">
             <div class="titlepage">
               <h2>Contact Us</h2>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 padding_right0">
-            <form id="request" class="main_form">
+          <div class="col-md-6 padding_right0" data-aos="fade-right">
+            <form id="contactForm" class="main_form">
               <div class="row">
                 <div class="col-md-12">
                   <input
                     class="contactus"
                     placeholder="Name"
-                    type="type"
-                    name="Name"
+                    type="text"
+                    name="name"
+                    required
                   />
                 </div>
                 <div class="col-md-12">
                   <input
                     class="contactus"
                     placeholder="Phone"
-                    type="type"
-                    name="Phone"
+                    type="tel"
+                    name="phone"
+                    required
                   />
                 </div>
                 <div class="col-md-12">
                   <input
                     class="contactus"
                     placeholder="Email"
-                    type="type"
-                    name="Email"
+                    type="email"
+                    name="email"
+                    required
                   />
                 </div>
                 <div class="col-md-12">
                   <textarea
                     class="textarea"
                     placeholder="Message"
-                    type="type"
-                    Message="Name"
-                  >
-Message</textarea
-                  >
+                    name="message"
+                    required
+                  ></textarea>
                 </div>
                 <div class="col-md-12">
-                  <a
-                    href="mailto:theeunoiaarchitects@gmail.com"
-                    class="send_btn"
-                    >Send</a
-                  >
+                  <button type="submit" class="send_btn">Send</button>
                 </div>
               </div>
             </form>
           </div>
-          <div class="col-md-6 padding_left0">
+          <div class="col-md-6 padding_left0" data-aos="fade-left">
             <div class="map_main">
               <div class="map-responsive">
                 <iframe
@@ -878,8 +950,41 @@ Message</textarea
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.0.0.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- sidebar -->
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+
+      // Contact Form Handling
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(this);
+          const data = Object.fromEntries(formData);
+
+          // Create mailto link with form data
+          const mailtoLink = `mailto:theeunoiaarchitects@gmail.com?subject=New Contact Form Submission&body=Name: ${data.name}%0D%0APhone: ${data.phone}%0D%0AEmail: ${data.email}%0D%0A%0D%0AMessage:%0D%0A${data.message}`;
+
+          // Open default email client
+          window.location.href = mailtoLink;
+
+          // Show success message
+          alert(
+            "Thank you for your message! Your default email client will open to send the message."
+          );
+
+          // Reset form
+          this.reset();
+        });
+    </script>
   </body>
 </html>
