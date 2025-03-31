@@ -1,0 +1,6 @@
+/* Image imports */
+@import url("https://raw.githubusercontent.com/srv2000/Eunoia1/main/website-html/images/banner2.jpg");
+
+.banner-image {
+  background-image: url("https://raw.githubusercontent.com/srv2000/Eunoia1/main/website-html/images/banner2.jpg");
+}
